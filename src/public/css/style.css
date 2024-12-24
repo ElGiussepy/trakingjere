@@ -1,4 +1,4 @@
-/* Estilo general style.css */
+/* Estilo general */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -6,20 +6,21 @@ body {
     background-color: #f4f4f9;
     color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding-top: 20px;
 }
 
 /* Contenedor principal */
 .container {
-    text-align: center;
-    padding: 20px;
-    background: #ffffff;
+    width: 100%;
+    max-width: 1800px;
+    background: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
+    padding: 20px;
+    overflow-x: auto;
 }
 
 /* Título */
@@ -27,27 +28,10 @@ h1 {
     color: #4CAF50;
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-/* Formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Input file */
-input[type="file"] {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-/* Botón de envío */
+/* Botón de navegación */
 button {
     background-color: #4CAF50;
     color: white;
@@ -57,10 +41,37 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
 }
 
 /* Responsivo */
@@ -70,5 +81,8 @@ button:hover {
     }
     button {
         font-size: 14px;
+    }
+    th, td {
+        padding: 10px;
     }
 }

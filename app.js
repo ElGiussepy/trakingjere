@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT; // Usa el puerto definido en .env
 const saludos = process.env.SALUDOS; // Usa la variable definida en .env
 // Servir archivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'src', 'public')));
 // Configuración Handlebars
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
